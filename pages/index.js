@@ -53,12 +53,6 @@ export default function Home() {
             ),
             description: (
               <>
-                <Paragraph>
-                  Aqui tem alguns dos estilos de dança que temos no SCD, mas se
-                  não achar o que procura, entre em contato. Pode ser que a
-                  turma já exista ou esteja começando.
-                </Paragraph>
-
                 <Service>
                   <ServiceHeader>
                     <HeadingThree>Forró</HeadingThree>
@@ -89,10 +83,15 @@ export default function Home() {
                   </ServiceHeader>
 
                   <Paragraph>
-                    O bom e lindo queridinho das danças de salão. Esse não
-                    poderia faltar, né?
+                    O bom e lindo <Mark>queridinho das danças de salão</Mark>.
+                    Ele não poderia faltar, né?
                   </Paragraph>
                 </Service>
+
+                <Paragraph>
+                  <Mark>Não encontrou o seu estilo?</Mark> Entre em contato e
+                  verifique se já não temos uma turma nova dele.
+                </Paragraph>
               </>
             ),
             cta: {
@@ -113,25 +112,6 @@ export default function Home() {
               job: "Aluno de Samba e Forró",
             },
             questions: [
-              {
-                title: "Qual o valor das aulas?",
-                answer: (
-                  <>
-                    <Paragraph>
-                      Somos comprometidos em te dar a{" "}
-                      <Mark>melhor aula pelo preço mais baixo</Mark> possível.
-                    </Paragraph>
-
-                    <Paragraph>
-                      Por enquanto, a mensalidade é de{" "}
-                      <Mark>apenas R$90.00</Mark>, mas não perca tempo porque
-                      estamos estruturando um modelo de pagamento em assinatura
-                      e assim que ele entrar, a mensalidade irá subir para os
-                      alunos novos.
-                    </Paragraph>
-                  </>
-                ),
-              },
               {
                 title: "Posso aprender a dançar, mesmo sendo duro?",
                 answer: (

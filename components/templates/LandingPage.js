@@ -63,17 +63,6 @@ export default function LandingPage({ meta, hero, services, shortcuts }) {
       <Main>
         <Section>
           <SectionHeader>
-            <LogoWrapper>
-              <Image
-                src={hero.image.src}
-                alt="logo"
-                layout="responsive"
-                height={75}
-                width={75}
-                priority={true}
-              />
-            </LogoWrapper>
-
             <HeadingOne>{hero.title}</HeadingOne>
           </SectionHeader>
 
@@ -204,7 +193,7 @@ const Main = styled.main`
 
 const LogoWrapper = styled.div`
   margin: 0 auto 50px;
-  width: 100px;
+  width: 50px;
 `;
 
 const ListOfChips = styled.nav`
