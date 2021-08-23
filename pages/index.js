@@ -249,6 +249,16 @@ export default function Home() {
               <>
                 <Service>
                   <ServiceHeader>
+                    <ServiceImageContainer>
+                      <Image
+                        src="/icons/wedding.png"
+                        alt="Homem dançando"
+                        height={64}
+                        width={64}
+                        layout="fixed"
+                      />
+                    </ServiceImageContainer>
+
                     <HeadingThree>
                       Dance para criar boas lembranças,{" "}
                       <Mark>sem se preocupar</Mark>
@@ -264,7 +274,7 @@ export default function Home() {
                   <Paragraph>
                     <Mark>Vocês não precisam aprender a dançar do zero</Mark>{" "}
                     para fazer um casamento lindo e marcante para os seus
-                    convidados, se a sua coreografia foi ensinada do jeito
+                    convidados, se a sua coreografia for ensinada do jeito
                     certo.
                   </Paragraph>
 
@@ -290,7 +300,7 @@ export default function Home() {
               image: {
                 src: "/testimonials/rsfernan.jpg",
               },
-              name: "Raquel Fernandes",
+              name: "Rachel Fernandes",
               job: "Noiva bem coreografada",
             },
             questions: [
