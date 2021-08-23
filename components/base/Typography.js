@@ -24,7 +24,7 @@ export const HeadingThree = styled.h3`
 export const Text = css`
   color: var(--text-color);
   font-family: "Mulish", sans-serif;
-  font-size: clamp(1.125em, 1.125em + 0.1vw, 1.4em);
+  font-size: clamp(1.25em, 1.25em + 0.1vw, 1.4em);
 `;
 
 export const Paragraph = styled.p`
@@ -39,4 +39,11 @@ export const Blockquote = styled.blockquote`
 export const Mark = styled.mark`
   background-color: transparent;
   color: var(--mark-color);
+`;
+
+export const UnorderedList = styled.ul``;
+
+export const ListItem = styled.li`
+  ${Text}
+  margin-block: 0.22em;
 `;
