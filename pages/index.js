@@ -1,13 +1,24 @@
+import Image from "next/image";
 import { useEffect } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaPhoneAlt, FaSpotify } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import styled from "styled-components";
 
-import { HeadingThree, Mark, Paragraph } from "../components/base/Typography";
+import {
+  HeadingThree,
+  ListItem,
+  Mark,
+  Paragraph,
+  UnorderedList,
+} from "../components/base/Typography";
 import LandingPage from "../components/templates/LandingPage";
 import { app } from "../app";
-import { Service, ServiceHeader } from "../components/articles/Service";
+import {
+  Service,
+  ServiceHeader,
+  ServiceImageContainer,
+} from "../components/articles/Service";
 
 export default function Home() {
   useEffect(() => {
@@ -24,19 +35,16 @@ export default function Home() {
         hero={{
           title: (
             <>
-              Olá! Somos o SCD. Uma <Mark>Escola de Dança</Mark> focada em te
-              ensinar a dançar para a vida ou para um momento especial,{" "}
-              <Mark>do zero</Mark>, mesmo que você não leve jeito.{" "}
-              <Mark>Forró</Mark>. <Mark>Samba</Mark>.{" "}
-              <Mark>Dança de Salão</Mark>. <Mark>Casamentos</Mark>.{" "}
-              <Mark>15 anos</Mark>.
+              Olá! Somos o <Mark>SCD</Mark>.<br></br> Te ensinamos a <br></br>
+              <Mark>dançar do zero</Mark>
+              <br></br> mesmo sendo duro.
             </>
           ),
           cta: {
-            text: "Entrar em contato",
+            text: "Quero aprender",
             onClick: () =>
               app.goToWhatsapp({
-                message: "Olá! Gostaria de saber mais sobre ...",
+                message: "Olá! Gostaria de aprender a dançar ...",
               }),
           },
           image: {
@@ -48,50 +56,116 @@ export default function Home() {
             chip: "Dança a Dois",
             title: (
               <>
-                Marque sua <Mark>1ª aula Grátis</Mark> e já saia dançando
+                Aulas de dança a dois feitas <br></br>
+                <Mark>para pessoas normais</Mark>
               </>
             ),
             description: (
               <>
                 <Service>
                   <ServiceHeader>
-                    <HeadingThree>Forró</HeadingThree>
+                    <ServiceImageContainer>
+                      <Image
+                        src="/icons/dancing-couple.png"
+                        alt="Homem dançando"
+                        height={64}
+                        width={64}
+                        layout="fixed"
+                      />
+                    </ServiceImageContainer>
+                    <HeadingThree>1ª aula grátis</HeadingThree>
                   </ServiceHeader>
 
                   <Paragraph>
-                    Quer aprender a dançar aquele forró arretado?{" "}
-                    <Mark>Chega de ficar balançando os dedos nos cantos</Mark>.
-                    Vem aprender com que sabe!
+                    <Mark>Saia dançando na primeira aula!</Mark> Esse é o nosso
+                    compromisso com você.
                   </Paragraph>
                 </Service>
 
                 <Service>
                   <ServiceHeader>
-                    <HeadingThree>Samba de Gafieira</HeadingThree>
+                    <ServiceImageContainer>
+                      <Image
+                        src="/icons/class.png"
+                        alt="Homem dançando"
+                        height={64}
+                        width={64}
+                        layout="fixed"
+                      />
+                    </ServiceImageContainer>
+                    <HeadingThree>
+                      A 1ª escola realmente focada no aluno
+                    </HeadingThree>
                   </ServiceHeader>
 
                   <Paragraph>
-                    Como a música já dizia:{" "}
-                    <Mark>Quem não gosta de samba, bom sujeito</Mark> não é. É
-                    ruim da cabeça ou doente do pé.
+                    Muitas escolas insistem em ensinar para os alunos como se
+                    eles fosses profissionais! Nós somos{" "}
+                    <Mark>100% focados em fazer pessoas normais dançarem</Mark>.
                   </Paragraph>
                 </Service>
 
                 <Service>
                   <ServiceHeader>
-                    <HeadingThree>Bolero</HeadingThree>
+                    <ServiceImageContainer>
+                      <Image
+                        src="/icons/couple.png"
+                        alt="Homem dançando"
+                        height={64}
+                        width={64}
+                        layout="fixed"
+                      />
+                    </ServiceImageContainer>
+                    <HeadingThree>Se é dança a dois, está aqui</HeadingThree>
                   </ServiceHeader>
 
                   <Paragraph>
-                    O bom e lindo <Mark>queridinho das danças de salão</Mark>.
-                    Ele não poderia faltar, né?
+                    Não importa o seu estilo, temos a dança perfeita para você:
+                  </Paragraph>
+
+                  <UnorderedList>
+                    <ListItem>
+                      <Mark>
+                        <b>Forró</b>
+                      </Mark>
+                    </ListItem>
+
+                    <ListItem>
+                      <Mark>
+                        <b>Dança de Salão</b>
+                      </Mark>
+                    </ListItem>
+
+                    <ListItem>
+                      <Mark>
+                        <b>Samba de Gafieira</b>
+                      </Mark>
+                    </ListItem>
+
+                    <ListItem>
+                      <Mark>
+                        <b>Zouk</b>
+                      </Mark>
+                    </ListItem>
+
+                    <ListItem>
+                      <Mark>
+                        <b>Bolero</b>
+                      </Mark>
+                    </ListItem>
+
+                    <ListItem>
+                      <Mark>
+                        <b>Soltinho</b>
+                      </Mark>
+                    </ListItem>
+                  </UnorderedList>
+
+                  <Paragraph>
+                    Não encontrou o que quer? Entre em contato para ver se sua
+                    turma não está te esperando.
                   </Paragraph>
                 </Service>
-
-                <Paragraph>
-                  <Mark>Não encontrou o seu estilo?</Mark> Entre em contato e
-                  verifique se já não temos uma turma nova dele.
-                </Paragraph>
               </>
             ),
             cta: {
