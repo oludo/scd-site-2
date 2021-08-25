@@ -29,8 +29,14 @@ export default function Home() {
     <Style>
       <LandingPage
         meta={{
+          siteName: "SCD - Escola de Dança",
           title: "SCD - Escola de Dança",
-          description: `Olá! Somos o SCD. Uma Escola de Dança focada em te ensinar a dançar para a vida ou para um momento especial do zero, mesmo que você não leve jeito. Forró. Samba. Dança de Salão. Casamentos. 15 anos.`,
+          description: `Olá! Somos o SCD. Uma Escola de Dança focada em te ensinar a dançar para a vida ou para um momento especial do zero, mesmo que você não leve jeito. Forró. Dança de Salão. Samba. Bolero. Zouk. Casamentos.`,
+          image: {
+            url: "/open_graph_image.jpg",
+            type: "image/jpeg",
+          },
+          url: "https://www.scdanca.com.br/",
         }}
         hero={{
           title: (
@@ -53,10 +59,10 @@ export default function Home() {
         }}
         services={[
           {
-            chip: "Dança a Dois",
+            chip: "Dança de Salão",
             title: (
               <>
-                Aulas de dança a dois feitas <br></br>
+                Aulas de dança de salão feitas <br></br>
                 <Mark>para pessoas normais</Mark>
               </>
             ),
@@ -77,7 +83,7 @@ export default function Home() {
                   </ServiceHeader>
 
                   <Paragraph>
-                    <Mark>Saia dançando na primeira aula!</Mark> Esse é o nosso
+                    <Mark>Saia dançando na 1ª aula!</Mark> Esse é o nosso
                     compromisso com você.
                   </Paragraph>
                 </Service>
@@ -116,7 +122,7 @@ export default function Home() {
                         layout="fixed"
                       />
                     </ServiceImageContainer>
-                    <HeadingThree>Se é dança a dois, está aqui</HeadingThree>
+                    <HeadingThree>Se é dança de salão, está aqui</HeadingThree>
                   </ServiceHeader>
 
                   <Paragraph>
@@ -125,55 +131,43 @@ export default function Home() {
 
                   <UnorderedList>
                     <ListItem>
-                      <Mark>
-                        <b>Forró</b>
-                      </Mark>
+                      <Mark>Forró</Mark>
                     </ListItem>
 
                     <ListItem>
-                      <Mark>
-                        <b>Dança de Salão</b>
-                      </Mark>
+                      <Mark>Samba no Pé</Mark>
                     </ListItem>
 
                     <ListItem>
-                      <Mark>
-                        <b>Samba de Gafieira</b>
-                      </Mark>
+                      <Mark>Zouk</Mark>
                     </ListItem>
 
                     <ListItem>
-                      <Mark>
-                        <b>Zouk</b>
-                      </Mark>
+                      <Mark>Bolero</Mark>
                     </ListItem>
 
                     <ListItem>
-                      <Mark>
-                        <b>Bolero</b>
-                      </Mark>
+                      <Mark>Soltinho</Mark>
                     </ListItem>
 
                     <ListItem>
-                      <Mark>
-                        <b>Soltinho</b>
-                      </Mark>
+                      <Mark>Samba de Gafieira</Mark>
                     </ListItem>
                   </UnorderedList>
 
                   <Paragraph>
-                    Não encontrou o que quer? Entre em contato para ver se sua
-                    turma não está te esperando.
+                    Não encontrou o que procurava? Entre em contato para ver se
+                    sua turma não está te esperando.
                   </Paragraph>
                 </Service>
               </>
             ),
             cta: {
-              text: "Marcar aula grátis",
+              text: "Quero saber mais",
               onClick: () =>
                 app.goToWhatsapp({
                   message:
-                    "Olá! Gostaria de saber mais sobre as aulas de dança a dois.",
+                    "Olá! Gostaria de saber mais sobre as aulas de dança de salão.",
                 }),
             },
             testimonial: {
@@ -287,7 +281,7 @@ export default function Home() {
               </>
             ),
             cta: {
-              text: "Não quero me preocupar",
+              text: "Quero saber mais",
               onClick: () =>
                 app.goToWhatsapp({
                   message:

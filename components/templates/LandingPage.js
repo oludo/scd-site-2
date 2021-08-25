@@ -58,6 +58,19 @@ export default function LandingPage({ meta, hero, services, shortcuts }) {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+
+        <meta property="og:site_name" content={meta.siteName} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        {meta.url && <meta property="og:url" content={meta.url} />}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
+        {meta.image && <meta property="og:image" content={meta.image.url} />}
+        {meta.image && (
+          <meta property="og:image:type" content={meta.image.type} />
+        )}
+        {meta.image && <meta property="og:image:width" content="800" />}
+        {meta.image && <meta property="og:image:height" content="600" />}
       </Head>
 
       <Main>
