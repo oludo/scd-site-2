@@ -33,10 +33,12 @@ export default function Home() {
           title: "SCD - Escola de Dança",
           description: `Olá! Somos o SCD. Uma Escola de Dança focada em te ensinar a dançar para a vida ou para um momento especial do zero, mesmo que você não leve jeito. Forró. Dança de Salão. Samba. Bolero. Zouk. Casamentos.`,
           image: {
-            url: "/open_graph_image.jpg",
-            type: "image/jpeg",
+            url: "/logo.png",
+            type: "image/png",
           },
           url: "https://www.scdanca.com.br/",
+          width: "350",
+          height: "350",
         }}
         hero={{
           title: (
@@ -52,9 +54,6 @@ export default function Home() {
               app.goToWhatsapp({
                 message: "Olá! Gostaria de aprender a dançar ...",
               }),
-          },
-          image: {
-            src: "/logo.svg",
           },
         }}
         services={[

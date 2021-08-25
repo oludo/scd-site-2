@@ -69,8 +69,12 @@ export default function LandingPage({ meta, hero, services, shortcuts }) {
         {meta.image && (
           <meta property="og:image:type" content={meta.image.type} />
         )}
-        {meta.image && <meta property="og:image:width" content="800" />}
-        {meta.image && <meta property="og:image:height" content="600" />}
+        {meta.image && (
+          <meta property="og:image:width" content={meta.image.width} />
+        )}
+        {meta.image && (
+          <meta property="og:image:height" content={meta.image.height} />
+        )}
       </Head>
 
       <Main>

@@ -13,16 +13,18 @@ export default function Hero({ title, logo, text, cta }) {
       </SectionHeader>
 
       <HeroContent>
-        <HeroImageContainer>
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            layout="fixed"
-            height={175}
-            width={175}
-            priority={true}
-          />
-        </HeroImageContainer>
+        {logo && (
+          <HeroImageContainer>
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              layout="fixed"
+              height={175}
+              width={175}
+              priority={true}
+            />
+          </HeroImageContainer>
+        )}
 
         <Paragraph>{text}</Paragraph>
 
